@@ -1,0 +1,213 @@
+.projects {
+    background-color: rgba($color-primary-dark, 1);
+    background-image:
+        url('/assets/patternBG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10rem;
+    position: relative;
+    @include respond(tab-land) {
+        
+        padding: 10rem 2rem;
+        
+    }
+
+    &__heading {
+        color: #ffffffda;
+        max-width: 50rem;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 8rem;
+        &--secondary {
+
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        &--primary {
+
+            h3 {
+
+                font-size: 3rem;
+                font-weight: 400;
+            }
+        }
+    }
+
+    &__container {
+
+        display: flex;
+        max-width: $max-width;
+        margin: 0 auto;
+        background-color: $color-white;
+        border-radius: 3rem;
+
+
+
+
+        @include respond(tab-port) {
+
+            flex-direction: column;
+            border-radius: 5px;
+
+        }
+
+
+        
+
+        &--left {
+
+            width: 40%;
+            padding: 5rem 3rem;
+
+
+            @include respond(tab-port) {
+                width: 100%;
+            }
+            .project__title {
+
+                color: $color-green-dark;
+                font-size: 4rem;
+            }
+
+            .project__description {
+
+                font-size: 1.2rem;
+                margin-bottom: 3rem;
+            }
+
+            .project__stack {
+
+                &--title {
+                    margin-bottom: 2rem;
+
+                    h3 {
+                        font-size: 1.6rem;
+                    }
+                }
+
+                margin-top: 2rem;
+                ul {
+                    list-style: none;
+
+                    li {
+
+                        display: flex;
+                        &:not(:last-child) {
+                            margin-bottom: 1rem;
+                        }
+
+                        .icon {
+                            margin-right: 0.5rem;
+
+                            .icon_right {
+              
+                                fill: $color-primary-dark;
+                            }
+                        }
+
+                        p {
+                            font-size: 1.2rem;
+                            transition: all 0.3s;
+                            cursor: pointer;
+                            transform-origin: left;
+
+                            &:hover {
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .preview_btn-container {
+
+                margin: 3rem 0;
+
+                .preview_btn {
+
+                    outline: none;
+                    background-color: transparent;
+                    border: 1px solid $color-primary;
+                    padding: 1rem 1.5rem;
+                    transition: all 0.3s;
+                    text-decoration: none;
+                    font-size: 1.3rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $color-primary;
+                        color: $color-white;
+                    }
+                }
+            }
+            
+        }
+
+        &--right {
+            
+            width: 60%;
+            overflow-x: hidden;
+            @include respond(tab-port) {
+                width: 100%;
+            }
+
+
+
+            .project__images--heading {
+
+                padding: 3rem;
+                text-align: center;
+                h3 {
+                    font-size: 3rem;
+                    font-weight: 400;
+                }
+            }
+
+            .project__images--container {
+
+                display: flex;
+                //flex-direction: column;
+                overflow-x: scroll;
+                padding: 3rem;
+
+                @include respond(tab-port) {
+                    padding: 1rem;
+                }
+
+
+                & > * {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .image {
+                    flex-shrink: 0;
+                    &:not(:last-child) {
+                        margin-bottom: 3rem;
+                    }
+                    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        transition: all 1s;
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                        //object-position: right;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+}
+
+
+

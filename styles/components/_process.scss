@@ -1,0 +1,162 @@
+.process {
+    background-color: rgba($color-primary-dark, 1);
+    background-image:
+        url('/assets/patternBG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffffda;
+    padding: 10rem;
+    position: relative;
+
+    @include respond(tab-land) {
+        
+        padding: 10rem 3rem;
+        
+    }
+
+    &__heading {
+
+        max-width: 50rem;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 8rem;
+        &--secondary {
+
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        &--primary {
+
+            h3 {
+
+                font-size: 2rem;
+                font-weight: 400;
+            }
+        }
+    }
+
+    &__container {
+
+
+        max-width: $max-width;
+        margin: 0 auto;
+        display: flex;
+        padding: 0 5rem;
+        justify-content: space-around;
+        align-items: top;
+        display: flex;
+        gap: 1rem;
+
+            @include respond(tab-land) {
+                flex-wrap: wrap;
+                gap: 0;
+
+                
+            }
+
+        
+
+        .process__single {
+
+            position: relative;
+            flex: 25%;
+            padding: 1rem;
+
+            @include respond(tab-land) {
+                flex: 50%;
+                margin-bottom: 5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            @include respond(phone) {
+                flex: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                
+
+            }
+
+
+            .process__num {
+
+                background-color: #ffffff;
+                display: flex;
+                width: 5rem;
+                height: 5rem;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2rem;
+                margin-bottom: 2rem;
+
+                h3 {
+                    font-size: 2rem;
+                    letter-spacing: 1px;
+                    color: $color-primary-dark;
+                    font-weight: 600;
+    
+                }
+            }
+
+            .svg {
+                position: absolute;
+
+                margin-left: 2rem;
+
+                left: 25%;
+                top: -10%;
+
+
+                @include respond(tab-land) {
+                    display: none;
+                }
+
+                & > * {
+
+                    max-width: 110%;
+
+                }
+            }
+
+            .svg--even {
+                top: 10%;
+            }
+
+            .process__title {
+
+                max-width: 20rem;
+                margin-bottom: 1rem;
+                h4 {
+
+                    font-size: 2.2rem;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                }
+            }
+
+            .process__paragraph {
+
+                max-width: 23rem;
+
+                p {
+                    font-size: 1.4rem;
+                    font-weight: 300;
+                }
+            }
+        }
+        
+
+
+    }
+
+
+}
+

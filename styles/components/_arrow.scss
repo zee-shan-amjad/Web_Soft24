@@ -1,0 +1,42 @@
+.arrow__right, .arrow__left {
+
+    position: absolute;
+    bottom: -2rem;
+    color: rgb(204, 204, 204);
+    z-index: 100;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.arrow__left {
+    left: 46.5%;
+
+    @include respond(tab-land) {
+        left: 42%
+    }
+
+    @include respond(phone) {
+        left: 39%
+    }
+
+    &:hover {
+        color: $color-grey-dark
+    }
+    
+}
+
+.arrow__right {
+    right: 46.5%;
+
+    @include respond(tab-land) {
+        right: 42%
+    }
+
+    @include respond(phone) {
+        right: 39%
+    }
+
+    &:hover {
+        color: $color-grey-dark
+    }
+}

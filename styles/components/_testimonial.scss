@@ -1,0 +1,121 @@
+.slider {
+    //background-color: aqua;
+    max-width: $max-width;
+    padding: 20rem 0;
+    margin: 0 auto;
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+
+    .heading {
+
+        text-align: center;
+        &__secondary {
+
+            margin-bottom: 1rem;;
+            p {
+
+                color: $color-primary;
+                text-transform: uppercase;
+                font-size: 1.6rem;
+                letter-spacing: 2px;
+
+            }
+        }
+
+        &__primary {
+
+            margin-bottom: 3rem;
+            h3 {
+
+                font-size: 3rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+
+    .testimonial__card {
+
+        //background-color: yellowgreen;
+
+        margin-right: 2rem;
+        padding: 3rem;
+        
+        &--container {
+            border: 1px solid $color-light-grey-1;
+            padding: 4rem;
+            transition: all 0.3s;
+            border-radius: 8px;
+
+            &:hover {
+    
+                box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.1);
+            }
+    
+            .review__title {
+    
+                h3 {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                }
+    
+                margin-top: 1.5rem;
+                margin-bottom: 2rem;
+    
+            }
+    
+            .review__description {
+    
+    
+                p {
+    
+                    font-size: 1.5rem;
+                    line-height: 3rem;
+                    color: rgba(0, 0, 0, 0.596);
+                }
+    
+                margin-bottom: 3rem;
+            }
+    
+            .user {
+    
+                display: flex;
+                align-items: center;
+                //background-color: chocolate;
+    
+                &__img {
+    
+                    margin-right: 3rem;
+                }
+    
+                &__info {
+    
+                    .name {
+        
+                        font-size: 1.2rem;
+                        h3 {
+                            font-weight: 600;
+    
+                        }
+                        margin-bottom: 0.2rem;
+        
+                    }
+        
+                    .designation {
+    
+                        h3 {
+                            color: $color-primary;
+                            font-weight: 600;
+                        }
+        
+        
+                    }
+                }
+            }
+        }
+
+        
+    }
+}
